@@ -1,0 +1,147 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: "ヒラギノ角ゴシック", "Arial", sans-serif;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl {
+  margin: 0;
+}
+
+h1 {
+  font-weight: 600;
+  color: #007BFF;
+  margin: 0 auto;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.primary-btn {
+  background-color: #007BFF;
+  border-radius: 50px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  width: 180px;
+  height: 50px;
+  border: none;
+}
+
+.primary-btn:hover {
+  opacity: 0.8;
+}
+
+.primary-btn:active {
+  position: relative;
+  top: 1px;
+}
+
+header {
+  text-align: center;
+}
+
+header img {
+  display: block;
+}
+
+header .logo {
+  margin: 18px auto 15px;
+  width: initial;
+}
+
+header .sp_mv {
+  width: 100vw;
+}
+
+.container {
+  margin: 0 20px;
+}
+
+#news {
+  margin: 50px 0 60px;
+  text-align: center;
+}
+
+#news h2 {
+  color: #007BFF;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#news p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#news dl {
+  text-align: left;
+  font-size: 14px;
+}
+
+#news dl dt {
+  margin: 15px 0;
+}
+
+#news dl dd {
+  margin: 0 0 15px 0;
+}
+
+#news dl hr {
+  color: #EDEDED;
+}
+
+main {
+  margin-bottom: 60px;
+}
+
+main h1 {
+  margin: 20px 0 15px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #007BFF;
+}
+
+main p {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#service {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#service > p {
+  margin: 5px 0 20px;
+}
+
+#service p {
+  margin: 10px 0 30px;
+}
+
+footer {
+  background-color: #1F1F1F;
+  color: #7B7B7B;
+  text-align: center;
+}
+
+footer p {
+  padding: 25px;
+}
+/*# sourceMappingURL=styles.css.map */
