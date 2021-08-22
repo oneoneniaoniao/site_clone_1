@@ -72,7 +72,7 @@ header {
 
   .logo {
     margin: 18px auto 15px;
-    width: initial;
+    width: 90px;
   }
 
   .sp_mv,
@@ -172,6 +172,10 @@ footer {
 
 @include tab {
   header {
+    .logo {
+      width: 120px;
+    }
+
     .sp_mv {
       display: none;
     }
@@ -241,12 +245,13 @@ footer {
     h1 {
       font-size: 32px;
     }
-  }
 
-  .primary-btn {
-    font-size: 15px;
-    width: 200px;
-    height: 55px;
+    .primary-btn {
+      font-size: 15px;
+      width: 200px;
+      height: 55px;
+    }
+
   }
 
   header {
