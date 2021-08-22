@@ -1,57 +1,69 @@
+$tab: 680px;
+$pc: 1110px;
+
+@mixin tab {
+  @media (min-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+
 body {
   margin: 0;
   font-family: "ヒラギノ角ゴシック", "Arial", sans-serif;
   color: #333;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-dl {
-  margin: 0
-}
+  h1,
+  p,
+  dl {
+    margin: 0;
+    line-height: 1;
+  }
 
-h1 {
-  font-weight: 600;
-  color: #007BFF;
-  margin: 0 auto;
-}
+  h1 {
+    font-weight: bold;
+    color: #007BFF;
+    margin: 0 auto;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+  }
 
-img {
-  width: auto;
-  max-width: 100%;
-  vertical-align: top;
-}
+  img {
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: top;
+  }
 
-.primary-btn {
-  background-color: #007BFF;
-  border-radius: 50px;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  width: 180px;
-  height: 50px;
-  border: none;
-}
+  .primary-btn {
+    background-color: #007BFF;
+    border-radius: 50px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    width: 180px;
+    height: 50px;
+    border: none;
+  }
 
-.primary-btn:hover {
-  opacity: 0.8;
-}
+  .primary-btn:hover {
+    opacity: 0.8;
+  }
 
-.primary-btn:active {
-  position: relative;
-  top: 1px;
+  .primary-btn:active {
+    position: relative;
+    top: 1px;
+  }
 }
-
 
 header {
-
   text-align: center;
 
   img {
@@ -63,8 +75,13 @@ header {
     width: initial;
   }
 
-  .sp_mv {
+  .sp_mv,
+  .pc-mv {
     width: 100vw;
+  }
+
+  .pc_mv {
+    display: none;
   }
 }
 
@@ -76,10 +93,7 @@ header {
   margin: 50px 0 60px;
   text-align: center;
 
-  h2 {
-    color: #007BFF;
-    font-size: 26px;
-    font-weight: bold;
+  h1 {
     margin-bottom: 5px;
   }
 
@@ -87,6 +101,8 @@ header {
     font-size: 12px;
     font-weight: 600;
     margin-bottom: 5px;
+    letter-spacing: 0.03em;
+
   }
 
   dl {
@@ -99,6 +115,7 @@ header {
 
     dd {
       margin: 0 0 15px 0;
+      line-height: 1.7;
     }
 
     hr {
@@ -106,6 +123,7 @@ header {
     }
   }
 }
+
 
 main {
   margin-bottom: 60px;
@@ -115,11 +133,14 @@ main {
     font-size: 24px;
     font-weight: 600;
     color: #007BFF;
+    letter-spacing: normal;
+    line-height: 1.5;
   }
 
   p {
     font-size: 15px;
     font-weight: 300;
+    line-height: 1.8;
   }
 }
 
@@ -129,6 +150,7 @@ main {
 
   >p {
     margin: 5px 0 20px;
+    letter-spacing: 0.03em;
   }
 
   p {
@@ -144,5 +166,126 @@ footer {
 
   p {
     padding: 25px;
+    font-size: 11px;
   }
+}
+
+@include tab {
+  header {
+    .sp_mv {
+      display: none;
+    }
+
+    .pc_mv {
+      display: initial;
+    }
+  }
+
+  #news {
+    margin: 80px auto 100px;
+    max-width: 760px;
+
+    h1 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 13px;
+    }
+
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+
+      dt {
+        width: 122px;
+        margin: 0;
+      }
+
+      dd {
+        line-height: 1.8;
+        width: 638px;
+        margin: 0;
+      }
+
+      hr {
+        width: 100%;
+        margin: 15px 0;
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    margin-bottom: 100px;
+
+    img {
+      width: 50%;
+    }
+
+    div {
+      margin: auto 20px;
+    }
+
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+  }
+}
+
+@include pc {
+  body {
+    h1 {
+      font-size: 32px;
+    }
+  }
+
+  .primary-btn {
+    font-size: 15px;
+    width: 200px;
+    height: 55px;
+  }
+
+  header {
+    .logo {
+      margin: 30px auto 29px;
+    }
+  }
+
+  main {
+    div {
+      margin: auto 70px;
+    }
+  }
+
+  #service {
+    margin-bottom: 80px;
+
+    #services {
+      margin: 0 auto 40px;
+      width: 1110px;
+      display: flex;
+
+      .service {
+        margin: 0 30px;
+      }
+
+      img {
+        width: 350px;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  footer p {
+    padding: 39px;
+    font-size: 12px;
+  }
+
 }
